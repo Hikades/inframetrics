@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>InfraMetrics</title>
+<meta name="description" content="Monitoreo y mantenimiento predictivo de maquinaria pesada.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="styles.css">
+<script src="app.js" defer></script>
+</head>
+<body data-mode="auth">
+<a class="skip" href="#view">Ir al contenido</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 10v10h14V10M10 20v-6h4v6"/></symbol><symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 2 2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></symbol><symbol id="i-truck" viewBox="0 0 24 24"><path d="M2 6h11v10H2zM13 9h4l4 4v3h-8"/><circle cx="6.5" cy="18.5" r="2"/><circle cx="17.5" cy="18.5" r="2"/></symbol><symbol id="i-machine" viewBox="0 0 24 24"><path d="M2 20h14M4 15h9v5H4zM8 15v-4h5l3-7 5 3-3 8"/><path d="M19 15l3 1-1 3-3-1z"/></symbol><symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 8 3 8H3s3-1 3-8M10 21h4"/></symbol><symbol id="i-trend" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></symbol><symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></symbol><symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.1L3 17.7 6.3 21l6.3-6.3a4 4 0 0 0 5.1-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></symbol><symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol><symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol><symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></symbol><symbol id="i-shield-check" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6zM8.5 12l2.5 2.5 4.5-5"/></symbol><symbol id="i-bars" viewBox="0 0 24 24"><path d="M4 20h16M6 20v-7M11 20V6M16 20v-10"/></symbol><symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h2M10 17h10M14 5v4M6 15v4"/></symbol><symbol id="i-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></symbol><symbol id="i-chev-r" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol><symbol id="i-chev-l" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></symbol><symbol id="i-arrow-l" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol><symbol id="i-arrow-r" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol><symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol><symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8v.01"/></symbol><symbol id="i-warn" viewBox="0 0 24 24"><path d="M12 3 2 20h20zM12 10v5M12 17.5v.01"/></symbol><symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v6M12 16.5v.01"/></symbol><symbol id="i-check-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></symbol><symbol id="i-thermo" viewBox="0 0 24 24"><path d="M14 14.8V5a2 2 0 0 0-4 0v9.8a4 4 0 1 0 4 0z"/></symbol><symbol id="i-activity" viewBox="0 0 24 24"><path d="M2 12h4l3-8 5 16 3-8h5"/></symbol><symbol id="i-gauge" viewBox="0 0 24 24"><path d="M4 18a9 9 0 1 1 16 0M12 14l4-5"/></symbol><symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></symbol><symbol id="i-filter" viewBox="0 0 24 24"><path d="M3 5h18l-7 8v6l-4 2v-8z"/></symbol><symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 0-14-4L4 9M4 4v5h5M4 13a8 8 0 0 0 14 4l2-2M20 20v-5h-5"/></symbol><symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6 7-12a7 7 0 0 0-14 0c0 6 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></symbol><symbol id="i-hourglass" viewBox="0 0 24 24"><path d="M6 3h12M6 21h12M7 3c0 5 5 6 5 9s-5 4-5 9M17 3c0 5-5 6-5 9s5 4 5 9"/></symbol><symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></symbol><symbol id="i-logout" viewBox="0 0 24 24"><path d="M9 4H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h4M16 8l4 4-4 4M20 12H9"/></symbol><symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol><symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol><symbol id="i-monitor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4M7 12l3-3 3 2 4-4"/></symbol><symbol id="i-helmet" viewBox="0 0 24 24"><path d="M4 16a8 8 0 0 1 16 0M2 16h20v3H2zM12 8v5"/></symbol><symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol><symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol><symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></symbol><symbol id="i-dollar" viewBox="0 0 24 24"><path d="M12 3v18M16 7.500c-1-1.200-2.400-1.500-4-1.500-2.200 0-4 1-4 2.700 0 4 8 1.800 8 5.600 0 1.700-1.800 2.700-4 2.700-1.800 0-3.300-.5-4.200-1.600"/></symbol><symbol id="i-clip" viewBox="0 0 24 24"><path d="M9 4h6v3H9zM7 5H5v16h14V5h-2M9 12h6M9 16h4"/></symbol><symbol id="i-pie" viewBox="0 0 24 24"><path d="M21 12A9 9 0 1 1 12 3v9zM15 3a9 9 0 0 1 6 6h-6z"/></symbol><symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></symbol><symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 21s-8-5-8-11a4.500 4.500 0 0 1 8-2.800A4.500 4.500 0 0 1 20 10c0 6-8 11-8 11z"/></symbol><symbol id="i-file" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6zM14 3v5h4M9 13h6M9 17h6"/></symbol><symbol id="i-send" viewBox="0 0 24 24"><path d="M22 3 11 14M22 3l-7 18-4-7-7-4z"/></symbol><symbol id="i-mail-ok" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol><symbol id="i-google" viewBox="0 0 24 24"><path fill="#4285F4" d="M23 12.300c0-.8-.1-1.500-.2-2.200H12v4.200h6.200a5.300 5.300 0 0 1-2.300 3.500v2.900h3.700c2.200-2 3.400-5 3.400-8.400z"/><path fill="#34A853" d="M12 24c3.200 0 5.900-1.100 7.900-2.900l-3.800-3c-1.100.7-2.400 1.100-4.100 1.100-3.100 0-5.800-2.100-6.700-5H1.400v3.100C3.400 21.300 7.400 24 12 24z"/><path fill="#FBBC05" d="M5.300 14.300a7.200 7.200 0 0 1 0-4.600V6.600H1.400a12 12 0 0 0 0 10.800z"/><path fill="#EA4335" d="M12 4.800c1.800 0 3.300.6 4.600 1.800l3.400-3.400C17.900 1.200 15.200 0 12 0 7.400 0 3.400 2.700 1.400 6.600l3.900 3.100c.9-2.800 3.600-4.900 6.700-4.900z"/></symbol><symbol id="i-microsoft" viewBox="0 0 24 24"><path fill="#F25022" d="M2 2h9.500v9.500H2z"/><path fill="#7FBA00" d="M12.500 2H22v9.500h-9.500z"/><path fill="#00A4EF" d="M2 12.500h9.500V22H2z"/><path fill="#FFB900" d="M12.500 12.500H22V22h-9.500z"/></symbol><symbol id="i-tag" viewBox="0 0 24 24"><path d="M3 12V4a1 1 0 0 1 1-1h8l9 9-9 9z"/><circle cx="8" cy="8" r="1.5"/></symbol><symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol><symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol><symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></symbol><symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2 20c0-3.500 3-5.500 7-5.500s7 2 7 5.500M16 4.500a3.500 3.500 0 0 1 0 7M18 14.500c2.500.5 4 2.500 4 5.500"/></symbol><symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.900 4.900l2.100 2.100M17 17l2.100 2.100M4.900 19.100 7 17M17 7l2.100-2.100"/></symbol><symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.500 10.900c.6.5 1 1.200 1 2.100h5c0-.9.4-1.600 1-2.100A6 6 0 0 0 12 3z"/></symbol><symbol id="i-stack" viewBox="0 0 24 24"><path d="M12 3 2 8l10 5 10-5zM2 12l10 5 10-5M2 16l10 5 10-5"/></symbol><symbol id="i-piggy" viewBox="0 0 24 24"><path d="M5 11a7 6 0 0 1 12-3h3v4l-2 1v3h-2v3h-3v-2H9v2H6v-3.500A6 6 0 0 1 5 11zM3 9c0 1 1 2 2 2"/><circle cx="15" cy="10" r=".8"/></symbol><symbol id="i-edit" viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16zM14 6l4 4"/></symbol><symbol id="i-msg" viewBox="0 0 24 24"><path d="M4 4h16v12H9l-5 4z"/><path d="M8 9h8M8 12h5"/></symbol><symbol id="i-chev-d" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol><symbol id="i-tri-up" viewBox="0 0 24 24"><path d="M12 5 21 19H3z" fill="currentColor" stroke="none"/></symbol><symbol id="i-tri-dn" viewBox="0 0 24 24"><path d="M12 19 3 5h18z" fill="currentColor" stroke="none"/></symbol><symbol id="i-mobile" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></symbol><symbol id="i-eye-off" viewBox="0 0 24 24"><path d="M3 3l18 18M10.600 6.100A9.800 9.800 0 0 1 12 6c6 0 10 6 10 6a17 17 0 0 1-3.200 3.700M6.500 6.600C3.700 8.300 2 12 2 12s4 7 10 7c1.700 0 3.200-.5 4.500-1.200M9.900 9.900a3 3 0 0 0 4.200 4.200"/></symbol><symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol></defs></svg>
+<!-- ===== ACCESO ===== -->
+<section class="auth" id="login" data-auth hidden>
+  <div class="hero">
+    <a class="brand" href="#login"><svg width="30" height="28" viewBox="0 0 30 28" aria-hidden="true"><path d="M15 1 29 27h-9l-5-10-5 10H1z" fill="#e10e19"/></svg><span>Infra<b>Metrics</b></span></a>
+    <div>
+      <h1>Convierte datos en operaciones <em>más seguras</em></h1>
+      <p>Monitorea en tiempo real el estado de tu maquinaria pesada, detecta anomalías y anticipa fallas antes de que ocurran.</p>
+    </div>
+    <ul class="feats"><li><span class="ft"><svg class="ic " aria-hidden="true"><use href="#i-monitor"/></svg></span>Monitoreo<br>en tiempo real</li><li><span class="ft"><svg class="ic " aria-hidden="true"><use href="#i-shield-check"/></svg></span>Prevención<br>de fallas</li><li><span class="ft"><svg class="ic " aria-hidden="true"><use href="#i-bars"/></svg></span>Mayor<br>disponibilidad</li></ul>
+    <div class="hero-art" aria-hidden="true"><img src="img/excavadora.webp" alt=""></div>
+    <div class="land" aria-hidden="true"></div>
+    <div class="mini"><div><svg class="ic " aria-hidden="true"><use href="#i-helmet"/></svg><span><strong>87 %</strong><small>Flota activa</small></span></div><div><svg class="ic " aria-hidden="true"><use href="#i-thermo"/></svg><span><strong>92 °C</strong><small>Temperatura motor</small></span></div><div><svg class="ic " aria-hidden="true"><use href="#i-activity"/></svg><span><strong>3.2 mm/s</strong><small>Vibración</small></span></div></div>
+  </div>
+  <div class="panel"><div class="box">
+    <div class="top">¿No tienes una cuenta? <a class="btn ghost sm" href="#registro">Registrarse</a></div>
+    <h1>Bienvenido a Infra<b>Metrics</b></h1>
+    <p>Inicia sesión para acceder a tu plataforma de monitoreo y análisis de maquinaria pesada.</p>
+    <form data-form="login" novalidate>
+      <p class="form-err" role="alert" hidden></p>
+      <div class="f"><label for="e1">Correo institucional o empresa</label><div class="inp l"><span class="fi"><svg class="ic " aria-hidden="true"><use href="#i-mail"/></svg></span><input id="e1" name="e1" data-rules="required email" type="email" autocomplete="email" placeholder="usuario@empresa.com"></div></div>
+      <div class="f"><label for="p1">Contraseña</label><div class="inp l pw"><span class="fi"><svg class="ic " aria-hidden="true"><use href="#i-lock"/></svg></span><input id="p1" name="p1" type="password" autocomplete="current-password" placeholder="Ingresa tu contraseña" data-rules="required"><button type="button" class="eye" data-eye aria-label="Mostrar contraseña" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-eye"/></svg></button></div></div>
+      <div class="opts"><label class="chk"><input type="checkbox" name="remember" checked>Recordarme</label><a class="link" href="#recuperar">¿Olvidaste tu contraseña?</a></div>
+      <button class="btn block">Iniciar sesión</button>
+      <div class="or"><span>O continúa con</span></div>
+      <div class="soc"><button type="button" class="btn line" data-social="Google"><svg class="ic col" aria-hidden="true"><use href="#i-google"/></svg>Continuar con Google</button><button type="button" class="btn line" data-social="Microsoft"><svg class="ic col" aria-hidden="true"><use href="#i-microsoft"/></svg>Continuar con Microsoft</button></div>
+          </form>
+  </div></div>
+</section>
+
+<section class="auth split" id="registro" data-auth hidden>
+  <div class="hero hx">
+    <a class="brand" href="#login"><svg width="30" height="28" viewBox="0 0 30 28" aria-hidden="true"><path d="M15 1 29 27h-9l-5-10-5 10H1z" fill="#e10e19"/></svg><span>Infra<b>Metrics</b></span></a>
+    <div class="hx-body">
+      <h1>Un acceso para <em>cada rol de tu operación</em></h1>
+      <p>Elige tu rol al registrarte. InfraMetrics adapta el menú, las alertas y los permisos a tu trabajo diario.</p>
+      <ul class="roles"><li><span class="ft"><svg class="ic" aria-hidden="true"><use href="#i-wrench"/></svg></span><div><strong>Técnico o inspector de campo</strong><small>Registra inspecciones y reporta anomalías</small></div></li><li><span class="ft"><svg class="ic" aria-hidden="true"><use href="#i-shield-check"/></svg></span><div><strong>Jefe de mantenimiento</strong><small>Aprueba paradas, preventivos y órdenes</small></div></li><li><span class="ft"><svg class="ic" aria-hidden="true"><use href="#i-briefcase"/></svg></span><div><strong>Jefe de operaciones</strong><small>Cruza producción con salud de la flota</small></div></li><li><span class="ft"><svg class="ic" aria-hidden="true"><use href="#i-trend"/></svg></span><div><strong>Ingeniero de confiabilidad</strong><small>Analiza MTBF, MTTR y umbrales</small></div></li></ul>
+    </div>
+    <div class="land" aria-hidden="true"></div>
+  </div>
+  <div class="panel"><div class="box">
+    <a class="back" href="#login"><svg class="ic" aria-hidden="true"><use href="#i-arrow-l"/></svg>Volver a iniciar sesión</a>
+    <h1>Crea tu cuenta</h1><p>Completa tus datos para activar tu acceso. El rol define qué pantallas y acciones verás.</p>
+    <form data-form="registro" novalidate>
+      <div class="f"><label for="n2">Nombre completo</label><div class="inp l"><span class="fi"><svg class="ic" aria-hidden="true"><use href="#i-user"/></svg></span><input id="n2" name="n2" autocomplete="name" placeholder="Ej. Carlos Mendoza" data-rules="required min:3"></div></div>
+      <div class="f"><label for="e2">Correo institucional o empresa</label><div class="inp l"><span class="fi"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg></span><input id="e2" name="e2" type="email" autocomplete="email" placeholder="Ej. nombre@empresa.com" data-rules="required email"></div></div>
+      <div class="f"><label for="r2">Rol</label><div class="inp l"><span class="fi"><svg class="ic" aria-hidden="true"><use href="#i-briefcase"/></svg></span><select id="r2" name="r2" data-rules="required"><option value="">Selecciona tu rol</option><option>Técnico o inspector de campo</option><option>Jefe o supervisor de mantenimiento</option><option>Jefe de operaciones</option><option>Ingeniero de confiabilidad</option></select></div></div>
+      <div class="fm2">
+        <div class="f"><label for="p2">Contraseña</label><div class="inp l pw"><span class="fi"><svg class="ic" aria-hidden="true"><use href="#i-lock"/></svg></span><input id="p2" name="p2" type="password" autocomplete="new-password" placeholder="Ej. Mina2026" data-rules="required min:8 strong"><button type="button" class="eye" data-eye aria-label="Mostrar contraseña" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-eye"/></svg></button></div></div>
+        <div class="f"><label for="p2b">Repite la contraseña</label><div class="inp l pw"><span class="fi"><svg class="ic" aria-hidden="true"><use href="#i-lock"/></svg></span><input id="p2b" name="p2b" type="password" autocomplete="new-password" placeholder="Repite tu contraseña" data-rules="required match:#p2"><button type="button" class="eye" data-eye aria-label="Mostrar contraseña" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-eye"/></svg></button></div></div>
+      </div>
+      <div class="meter" id="meter" aria-live="polite"><i></i><i></i><i></i><i></i><span>Mínimo 8 caracteres, con letras y números</span></div>
+      <div class="f"><label class="chk"><input type="checkbox" name="t2" data-rules="required">Acepto los términos y la política de privacidad</label></div>
+      <button class="btn block"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Crear cuenta</button>
+    </form>
+    <p class="foot">¿Ya tienes cuenta? <a class="link" href="#login">Inicia sesión</a></p>
+  </div></div>
+</section>
+
+<section class="auth split" id="recuperar" data-auth hidden>
+  <div class="hero hx">
+    <a class="brand" href="#login"><svg width="30" height="28" viewBox="0 0 30 28" aria-hidden="true"><path d="M15 1 29 27h-9l-5-10-5 10H1z" fill="#e10e19"/></svg><span>Infra<b>Metrics</b></span></a>
+    <div class="hx-body">
+      <h1>Recupera tu acceso <em>en 3 pasos</em></h1>
+      <ol class="steps"><li class="on"><span>1</span>Ingresa tu correo institucional</li><li class="on"><span>2</span>Escribe el código que llegó a tu correo</li><li class=""><span>3</span>Crea una nueva contraseña segura</li></ol>
+    </div>
+    <div class="land" aria-hidden="true"></div>
+  </div>
+  <div class="panel"><div class="box">
+    <a class="back" href="#login"><svg class="ic" aria-hidden="true"><use href="#i-arrow-l"/></svg>Volver a iniciar sesión</a>
+    <span class="dlg-ic"><svg class="ic" aria-hidden="true"><use href="#i-shield-check"/></svg></span>
+    <h1>Restablece tu contraseña</h1><p>Te enviamos un código de 6 dígitos a tu correo. Vence en 10 minutos.</p>
+    <form data-form="recuperar" novalidate>
+      <p class="form-err" role="alert" hidden></p>
+      <div class="f"><label for="e3">Correo institucional o empresa</label><div class="inp l"><span class="fi"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg></span><input id="e3" name="e3" type="email" autocomplete="email" placeholder="Ej. nombre@empresa.com" data-rules="required email"></div></div>
+      <div class="f"><label for="d0">Código de un solo uso</label>
+        <div class="otp" data-otp><input id="d0" inputmode="numeric" maxlength="1" placeholder="0" aria-label="Dígito 1" autocomplete="one-time-code"><input id="d1" inputmode="numeric" maxlength="1" placeholder="0" aria-label="Dígito 2" autocomplete="off"><input id="d2" inputmode="numeric" maxlength="1" placeholder="0" aria-label="Dígito 3" autocomplete="off"><input id="d3" inputmode="numeric" maxlength="1" placeholder="0" aria-label="Dígito 4" autocomplete="off"><input id="d4" inputmode="numeric" maxlength="1" placeholder="0" aria-label="Dígito 5" autocomplete="off"><input id="d5" inputmode="numeric" maxlength="1" placeholder="0" aria-label="Dígito 6" autocomplete="off"></div>
+        <input type="hidden" id="o3" name="o3" data-rules="required otp">
+        <small class="resend">¿No llegó? <button type="button" class="link" data-resend disabled>Reenviar código en <b>0:45</b></button></small>
+        <small>En esta demostración usa 123456.</small></div>
+      <div class="f"><label for="p3">Nueva contraseña</label><div class="inp l pw"><span class="fi"><svg class="ic" aria-hidden="true"><use href="#i-lock"/></svg></span><input id="p3" name="p3" type="password" autocomplete="new-password" placeholder="Ej. Mina2026" data-rules="required min:8 strong"><button type="button" class="eye" data-eye aria-label="Mostrar contraseña" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-eye"/></svg></button></div></div>
+      <button class="btn block"><svg class="ic" aria-hidden="true"><use href="#i-refresh"/></svg>Restablecer contraseña</button>
+      <p class="okn"><svg class="ic" aria-hidden="true"><use href="#i-info"/></svg>Por seguridad, se cerrará la sesión en todos tus dispositivos al cambiar la contraseña.</p>
+    </form>
+  </div></div>
+</section>
+
+<!-- ===== APLICACIÓN ===== -->
+<div class="shell" id="shell" hidden>
+  <header class="mbar"><button type="button" class="ib" id="menu-btn" aria-label="Abrir menú" aria-controls="nav" aria-expanded="false"><svg class="ic" aria-hidden="true"><use href="#i-menu"/></svg></button><a class="brand" href="#dash"><svg width="26" height="24" viewBox="0 0 30 28" aria-hidden="true"><path d="M15 1 29 27h-9l-5-10-5 10H1z" fill="#e10e19"/></svg><span>Infra<b>Metrics</b></span></a><a class="av" id="mbar-av" href="#perfil" aria-label="Mi perfil">CM</a></header>
+  <nav class="side" id="nav" aria-label="Principal"></nav>
+  <div class="scrim" id="scrim" data-navclose hidden></div>
+  <main id="view" tabindex="-1"></main>
+</div>
+
+<dialog id="parada" aria-labelledby="pt">
+  <span class="dlg-ic"><svg class="ic " aria-hidden="true"><use href="#i-warn"/></svg></span><h2 id="pt">Autorizar parada de EX-02</h2>
+  <p id="pp">Probabilidad de falla: 85 % en las próximas 48 horas.</p>
+  <div class="cmp"><div><small>Parar hoy</small><strong>40 min</strong></div><div class="bad"><small>Si se rompe</small><strong id="pd">4 días</strong></div></div>
+  <div class="acts"><button class="btn" id="p-ok" type="button"><svg class="ic " aria-hidden="true"><use href="#i-shield-check"/></svg>Confirmar parada</button><button class="btn line" id="p-no" type="button"><svg class="ic " aria-hidden="true"><use href="#i-x"/></svg>Cancelar</button></div>
+</dialog>
+
+<dialog id="confirm" aria-labelledby="ct" aria-describedby="cm">
+  <span class="dlg-ic"><svg class="ic" aria-hidden="true"><use href="#i-warn"/></svg></span><h2 id="ct">¿Confirmas esta acción?</h2>
+  <p id="cm"></p>
+  <p class="note"><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg><span>Asegúrate de estar seguro antes de continuar: <strong>esta acción es irreversible</strong> y la orden no podrá volver a la etapa anterior.</span></p>
+  <div class="acts"><button class="btn" id="c-ok" type="button"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Sí, avanzar</span></button><button class="btn line" id="c-no" type="button" autofocus>Cancelar</button></div>
+</dialog>
+
+<dialog id="clave" aria-labelledby="clt"><form data-form="clave" novalidate>
+  <span class="dlg-ic"><svg class="ic" aria-hidden="true"><use href="#i-lock"/></svg></span><h2 id="clt">Cambiar contraseña</h2>
+  <p class="dsub">Usa al menos 8 caracteres, con letras y números.</p>
+  <p class="form-err" role="alert" hidden></p>
+  <div class="f"><label for="c0">Contraseña actual</label><input id="c0" name="c0" type="password" autocomplete="current-password" data-rules="required"></div>
+  <div class="f"><label for="c1">Nueva contraseña</label><input id="c1" name="c1" type="password" autocomplete="new-password" data-rules="required min:8 strong"></div>
+  <div class="f"><label for="c2">Repite la nueva contraseña</label><input id="c2" name="c2" type="password" autocomplete="new-password" data-rules="required match:#c1"></div>
+  <div class="acts"><button class="btn"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Actualizar contraseña</button><button type="button" class="btn line" data-close>Cancelar</button></div>
+</form></dialog>
+
+<dialog id="det" aria-labelledby="dtt"><div id="det-b"></div></dialog>
+
+<dialog id="devs" aria-labelledby="dvt"><div id="devs-b"></div></dialog>
+
+<dialog id="nprev" aria-labelledby="npt"><form data-form="nprev" novalidate>
+  <span class="dlg-ic"><svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></span><h2 id="npt">Nuevo preventivo</h2>
+  <p class="dsub">Se agregará a los pendientes de aprobación y a los próximos mantenimientos.</p>
+  <p class="form-err" role="alert" hidden></p>
+  <div class="f"><label for="n5e">Equipo</label><select id="n5e" name="n5e" data-rules="required"><option value="">Elige un equipo</option></select></div>
+  <div class="fm"><div class="f"><label for="n5k">Tipo</label><select id="n5k" name="n5k"><option value="pr">Preventivo</option><option value="co">Correctivo</option></select></div>
+  <div class="f"><label for="n5d">Fecha estimada</label><input id="n5d" name="n5d" type="date" data-rules="required"></div></div>
+  <div class="f"><label for="n5t">Tarea</label><input id="n5t" name="n5t" placeholder="Ej. Cambio de aceite" data-rules="required min:4"></div>
+  <div class="fm"><div class="f"><label for="n5a">Horas actuales</label><input id="n5a" name="n5a" type="number" data-rules="required num:0,100000"></div>
+  <div class="f"><label for="n5b">Intervalo (h)</label><input id="n5b" name="n5b" type="number" data-rules="required num:1,100000"></div></div>
+  <div class="acts"><button class="btn"><svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg>Agregar preventivo</button><button type="button" class="btn line" data-close>Cancelar</button></div>
+</form></dialog>
+
+<div id="toasts" role="status" aria-live="polite"></div>
+</body>
+</html>
