@@ -148,7 +148,7 @@ function logout() { sessionStorage.removeItem('im_session'); localStorage.remove
 /* ===== Iconos, fotos de equipos y gráficos (sistema visual compartido) ===== */
 const ic = (n, c = '') => `<svg class="ic ${c}" aria-hidden="true"><use href="#i-${n}"/></svg>`;
 const IMG = { EX: 'excavadora', CF: 'cargador', VQ: 'volquete', TR: 'tractor' };
-const art = (e, cls = '') => `<div class="pic ${cls}"><img src="img/${IMG[e.tipo] || 'excavadora'}.webp" alt="${e.id} · ${e.modelo}" loading="lazy" decoding="async"></div>`;
+const art = (e, cls = '') => `<div class="pic ${cls}"><img src="assets/img/${IMG[e.tipo] || 'excavadora'}.webp" alt="${e.id} · ${e.modelo}" loading="lazy" decoding="async"></div>`;
 
 function lc({ vals, labels, min, max, ticks, limit, limitLabel, fmt, aria, tick = v => v, call = vals.length - 1, ytitle = '' }) {
   const n = vals.length, X = i => i * 100 / (n - 1), Y = v => 100 - (v - min) * 100 / (max - min);
